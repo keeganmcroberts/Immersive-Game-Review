@@ -24,7 +24,7 @@ function App() {
 
 
 useEffect(()=>{
-  fetch("http://localhost:3002/gameCard")
+  fetch("http://localhost:3000/gameCard")
   .then(res=> res.json())
   .then((fetchedData)=>{
   setGameCardData([...fetchedData])
@@ -36,7 +36,7 @@ useEffect(()=>{
   function addNewGame(newGame) {
     setGameCardData([newGame, ...gameCardData])
 
-    fetch("http://localhost:3002/gameCard", {
+    fetch("http://localhost:3000/gameCard", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newGame)

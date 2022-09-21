@@ -79,7 +79,7 @@ useEffect(()=> {
             body: JSON.stringify({likes: gameCardDataFromContainer.likes +1 })
 
         }
-        fetch(`http://localhost:3002/gameCard/${gameCardDataFromContainer.id}`, config)
+        fetch(`http://localhost:3000/gameCard/${gameCardDataFromContainer.id}`, config)
         .then(res=> res.json())
         .then(data => updateLikes(data))
 
@@ -92,7 +92,7 @@ useEffect(()=> {
             body: JSON.stringify({dislikes: gameCardDataFromContainer.dislikes +1 })
 
         }
-        fetch(`http://localhost:3002/gameCard/${gameCardDataFromContainer.id}`, config)
+        fetch(`http://localhost:3000/gameCard/${gameCardDataFromContainer.id}`, config)
         .then(res=> res.json())
         .then(data => updateDislikes(data))
 
